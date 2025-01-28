@@ -10,6 +10,10 @@ Vue3、TypeScript、Vuetify、Vue Routerのシンプルな環境。
 - Vuetify
 - Vue Router
 
+# 使い方
+
+
+# どのように作ったか？
 ## 1. nvmでnodeのインストール
 1. nvmインストール
 ```shell
@@ -54,8 +58,7 @@ npm install vuetify@latest
 ```
 
 2. Vuetifyのセットアップ
-2.1. 以下の内容のsrc/plugins/vuetify.tsを作成する。
-※ pluginsフォルダは作成する。    
+- 以下の内容のsrc/plugins/vuetify.tsを作成する。 
 ```typescript
 import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
@@ -119,7 +122,7 @@ npm install vue-router
 
 2. Home画面とSub画面を作成
 - src/viewsフォルダを作成する
-- 以下の内容のHomeView.vueを作成する
+- 以下の内容のsrc/views/HomeView.vueを作成する
 ```vue
 <template>
   <v-container>
@@ -151,7 +154,7 @@ export default defineComponent({
 </style>
 ```
 
-- 以下の内容のSubView.vueを作成する
+- 以下の内容のsrc/views/SubView.vueを作成する
 ```vue
 <template>
   <v-container>
