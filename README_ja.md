@@ -1,8 +1,7 @@
-[日本語](README_ja.md)
+[English](README.md)
 
-# Vue3 + TypeScript + Vue Router + Vuetify
-
-A simple environment using Vue3, TypeScript, Vuetify, and Vue Router.
+# Vue3 + TypeScript + VueRouter + Vuetify
+Vue3、TypeScript、Vuetify、Vue Routerのシンプルな環境。
 
 ![demo](materials/demo.gif)
 
@@ -13,74 +12,73 @@ A simple environment using Vue3, TypeScript, Vuetify, and Vue Router.
 - Vuetify
 - Vue Router
 
-## How to Use
-
-1. Clone this repository:
+# 使い方
+1. このリポジトリをgit cloneする。
 ```shell
 git clone git@github.com:flappan/vue3-ts-vuetify-router.git
 ```
 
-2. Install dependencies:
+2. 依存関係のインストール
 ```shell
 npm install
 ```
 
-3. Run in development mode:
+3. 開発モードで実行
 ```shell
 npm run dev
 ```
 
-4. Build:
+4. ビルド
 ```shell
 npm run build
 ```
 
-# How Was This Created?
-## 1. Install Node using nvm
-1. Install nvm:
+# どのように作ったか？
+## 1. nvmでnodeのインストール
+1. nvmインストール
 ```shell
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 ```
-2. Install the latest Node:
+2. 最新のnodeをインストール
 ```shell
 nvm install node 
 ```
-3. Check the current Node version:
+3. 現在のnodeを確認
 ```shellgit a
 nvm current
 ```
 
-## 2. Install Vite
+## 2. Viteのインストール
 ```shell
 npm install -g create-vite
 ```
 
-## 3. Project Setup
-1. Create the project:
+## 3. プロジェクト設定
+1.プロジェクト作成
 ```shell
 npm init vite@latest vue3-ts-vuetify -- --template vue-ts
 ```
 
-2. Move to the project directory and install dependencies:
+2. プロジェクトディレクトリへ移動し、依存関係をインストール
 ```shell
 cd vue3-ts-vuetify
 npm install
 ```
 
-3. Run locally:
+3. ローカル環境で実行
 ```
 npm run dev
 ```
 ![first_run](materials/first_run.png)
 
-## 4. Introduce Vuetify
-1. nstall Vuetify:
+## 4. Vuetifyの導入
+1. Vuetifyのインストール
 ```
 npm install vuetify@latest
 ```
 
-2. Set up Vuetify
-- Create src/plugins/vuetify.ts with the following content:
+2. Vuetifyのセットアップ
+- 以下の内容のsrc/plugins/vuetify.tsを作成する。 
 ```typescript
 import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
@@ -93,14 +91,14 @@ export default createVuetify({
 })
 ```
 
-3. Create src/global.d.ts with the following content:
+3. 以下の内容のsrc/global.d.tsを作成する。
 ```typescript
 declare module 'vuetify/styles'
 declare module 'vuetify/lib/components'
 declare module 'vuetify/lib/directives'
 ```
 
-4. Rewrite src/main.ts as follows:
+4. src/main.tsを以下の内容に書き換える。
 ```typescript
 import { createApp } from 'vue'
 import vuetify from './plugins/vuetify'
@@ -112,7 +110,7 @@ app.use(vuetify)
 app.mount('#app')
 ```
 
-5. Rewrite src/App.vue as follows:
+5. src/App.vueを以下の内容に書き変える
 ```vue
 <template>
   <v-container>
@@ -130,21 +128,21 @@ export default defineComponent({
 </script>
 ```
 
-6. Run to confirm:
+6. 実行確認
 ```
 npm run dev
 ```
 ![run_vuetify](materials/run_vuetify.png)
 
-## Introduce Vue Router
-1. Install Vue Router:
+## 5. Vue Routerの導入
+1. Vue Routerのインストール
 ```shell
 npm install vue-router
 ```
 
-2. Create Home and Sub screens
-- Create the src/views folder.
-- Create src/views/HomeView.vue with the following content:
+2. Home画面とSub画面を作成
+- src/viewsフォルダを作成する
+- 以下の内容のsrc/views/HomeView.vueを作成する
 ```vue
 <template>
   <v-container>
@@ -176,7 +174,7 @@ export default defineComponent({
 </style>
 ```
 
-- Create src/views/SubView.vue with the following content:
+- 以下の内容のsrc/views/SubView.vueを作成する
 ```vue
 <template>
   <v-container>
@@ -209,8 +207,8 @@ export default defineComponent({
 
 ```
 
-3. Routing Settings
-- Create src/router/index.ts with the following content:
+3. ルーティングの設定
+- 以下の内容のscr/router/index.tsを作成する。
 ```typescript
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
@@ -237,8 +235,8 @@ const router = createRouter({
 export default router
 ```
 
-4.  Modify App.vue
-- Rewrite App.vue as follows:
+4.  App.vueの修正
+- App.vueを以下の内容に書き換える
 ```vue
 <template>
   <v-app>
@@ -255,21 +253,21 @@ export default defineComponent({
 </script>
 ```
 
-5. Modify main.ts:
+5. main.tsを修正
 ```typescript
 import { createApp } from 'vue'
 import vuetify from './plugins/vuetify'
-import router from './router' // Added
+import router from './router' // 追加
 import App from './App.vue'
 
 const app = createApp(App)
 
 app.use(vuetify)
-app.use(router) // Added
+app.use(router) // 追加
 app.mount('#app')
 ```
 
-6. Confirm it runs:
+6. 実行確認
 ```shell
 npm run dev
 ```

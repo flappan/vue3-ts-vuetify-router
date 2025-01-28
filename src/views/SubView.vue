@@ -1,8 +1,8 @@
 <template>
   <v-container>
-    <h1>Sub 画面</h1>
-    <p>Sub 画面です。</p>
-    <v-btn color="secondary" @click="goHome">Home へ戻る</v-btn>
+    <h1>Sub</h1>
+    <p>This is the Sub Screen.</p>
+    <v-btn color="secondary" @click="goHome">Go Back to Home</v-btn>
   </v-container>
 </template>
 
