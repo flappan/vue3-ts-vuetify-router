@@ -1,6 +1,8 @@
-# None
+# Vue3 + TypeScript + VueRouter + Vuetify
+Vue3、TypeScript、Vuetify、Vue Routerのシンプルな環境。
 
-## アーキテクチャ
+![demo](materials/demo.gif)
+
 - npm
 - Vite
 - Vue3
@@ -246,3 +248,4 @@ app.mount('#app')
 ```shell
 npm run dev
 ```
+![complete](materials/complete.png)
